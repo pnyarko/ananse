@@ -2179,12 +2179,16 @@ B. The EC2 instances the application runs on are in a different subnet than the 
 C. The EC2 instances the application runs on have permission to the queue, but not to some of the messages in the queue
 D. The messages surpassed the retention period for the queue
 
+D
+
 206. Your company is posting a big article on the front page of your website tomorrow. It is expected that the demand could potentially overwhelm your infrastructure. In the event of a load failure, how can you set up DNS failover to a static website?
 
 A. Use Route 53 and the failover option to failover to a static S3 website bucket or CloudFront distribution in the event of an issue
 B. Enable failover to an on-premise data center
 C. Build out additional capacity to ensure there is no scenario in which the application can fail
 D. Duplicate the exact application architecture in another region and configure DNS latency-based routing
+
+A
 
 207. The KPL is an easy-to-use, highly configurable library that helps you write to an Amazon Kinesis stream. It acts as an intermediary between your producer application code and the stream's API actions. One of its key concepts is aggregation. Which of the following best describes aggregation as it relates to the KPL?
 
@@ -2193,10 +2197,14 @@ B. It refers to performing a single action on multiple items instead of repeated
 C. It is a blob of data that has particular meaning to the user. Examples include a JSON blob representing a UI event on a web site, or a log entry from a web server
 D. It refers to the storage of multiple records in a stream's record and allows customers to increase the number of records sent per API call, which effectively increases producer throughput
 
+B
+
 208. When a snapshot is being taken against an EBS volume, the volume becomes unavailable and the instance no longer has the ability to communicate with the EBS volume until the snapshot is complete.
 
 A. True
 B. False
+
+B
 
 209. Which of the following is true of an SQS message?
 
@@ -2223,6 +2231,7 @@ B. The order that messages are received in is not guaranteed in SQS
 C. Your application is using short polling
 D. You failed to set the correct permissions on message 2
 
+B
 
 212. Your supervisor calls you wanting to know why an SWF workflow you created has not made any progress in the last three weeks. What is the most likely explanation for the workflow’s behavior?
 
@@ -2231,6 +2240,7 @@ B. SWF does not support the tasks you created for on-premises servers, so the wo
 C. The workflow has exceeded SWF’s 14-day maximum workflow execution time
 D. The last task has exceeded SWF’s 14-day maximum task execution time
 
+A
 
 213. One of your more important clients is a Telecom business who needs to process some real-time data in a distributed manner. They suggest to you that they think they should use either Amazon SQS or Amazon Kinesis to achieve this and they want you to tell them what would be the difference between the two. After some research you decide that they should use Kinesis and are trying to put together some reasons for this. One of the below statements is INCORRECT, regarding this. Which one?
 
@@ -2248,6 +2258,7 @@ B. Create CloudWatch metrics that stop and start the instance based off of statu
 C. Implement a third party monitoring tool such as Nagios
 D. Write a script that periodically shuts down and starts instances
 
+B
 
 215. Your company wants to backup the onsite file server to AWS but does not want to serve the files from S3 to your office network when files need accessed. Which service and setup would you use to accomplish this task?
 
@@ -2256,6 +2267,7 @@ B. Use Amazon import/export
 C. Use Amazon Storage Gateway and gateway-cached volumes to store the data locally and asynchronously backup point-in-time snapshots to S3
 D. Use Amazon Storage Gateway and gateway-stored volumes to store the data locally and asynchronously backup point-in-time snapshots to S3
 
+D
 
 216. What is the difference between an availability zone and an edge location?
 
@@ -2264,6 +2276,7 @@ B. An availability zone is an Amazon resource within an AWS region, whereas an e
 C. Edge locations are used as control stations for AWS resources
 D. None of the above
 
+B
 
 217. After building out a new VPC from scratch, you have attached an Internet gateway to the only route table within your VPC. This means all instances currently belong to a public subnet. While trying to connect to one of the instances over the Internet gateway, you are experiencing connectivity issues preventing any communication from your machine to the instance over the Internet. After investigating, you notice that the security group has proper permissions and the route table is currently as follows: 10.0.0.0/16 local / 0.0.0.0/16 igw-xxxx58d8 / What might be the issue?
 
@@ -2272,12 +2285,16 @@ B. The Internet gateway is not attached to the VPC
 C. Change the route table Destination for the IGW to be 0.0.0.0/0
 D. Change the route table Destination for the IGW to be 10.0.0.0/16
 
+C
+
 218. You have been told that you need to set up a bastion host by your manager in the cheapest, most secure way, and that you should be the only person that can access it via SSH. Which of the following setups would satisfy your manager's request?
 
 A. A small EC2 instance and a security group which only allows access on port 22 via your IP address
 B. A small EC2 instance and a security group which only allows access on port 22
 C. A large EC2 instance and a security group which only allows access on port 22
 D. A large EC2 instance and a security group which only allows access on port 22 via your IP address
+
+A
 
 219. Which of the following statements is FALSE regarding the role of a bastion host?
 
@@ -2286,6 +2303,7 @@ B. A Bastion host is used to SSH into the internal network to access private res
 C. A Bastion host should maintain extremely tight security and monitoring as it is available to the public
 D. A Bastion host should be on a private subnet and never a public subnet due to security concerns
 
+D
 
 220. You recently purchased four reserved EC2 instances in the US-East-1 region’s Availability Zone 1. Your supervisor just informed you that she would like the instances distributed equally across US-East-1 region Availability Zones 1 and 2. Can you use the reserved instances you just purchased to deploy EC2 instances in Availability Zone 2?
 
@@ -2294,12 +2312,16 @@ B. No, you need to sell two of the current Availability Zone 1 reserved instance
 C. Yes, you can change the destination Availability Zone for the reserved instances by contacting AWS
 D. Yes, you can deploy two EC2 instances in Availability Zone 2 and they will be automatically billed as reserved instances since both Availability Zones are in the same region
 
+D
+
 221. Your EC2 instances are configured to run behind an Amazon VPC. You have assigned two web serves instances to an Elastic Load Balancer. However, the instances and the ELB are not reachable via URL to the elastic load balancer serving the web app data from the EC2 instances. How might you resolve the issue so that your instances are serving the web app data to the public Internet?
 
 A. Attach an Internet gateway to the VPC and route it to the subnet
 B. Add an elastic IP address to the instance
 C. Use Amazon Elastic Load Balancer to serve requests to your instances located in the internal subnet
 D. None of the above
+
+A
 
 222. In the basic monitoring package for EC2, Amazon CloudWatch provides the following metrics:
 
@@ -2308,6 +2330,8 @@ B. Operating system visible metrics, such as memory utilization
 C. Hypervisor visible metrics, such as CPU utilization
 D. Database memory usage
 
+C
+
 223. While running an EC2 instance, you've been storing data on one of the instance's volumes. However, to save money, you shut down the instance for the weekend. The following week, after starting the instance, you notice that all your work has been lost and is no longer available on the EC2 instance. What might be the cause of this?
 
 A. The EBS volume was not big enough to handle all of the processing data
@@ -2315,14 +2339,16 @@ B. The instance might have been compromised
 C. The EC2 instance was using EBS backed root volumes, which are ephemeral and only live for the life of the instance
 D. The EC2 instance was using instance store volumes, which are ephemeral and only live for the life of the instance
 
+D
 
 224. Which of the following will occur when an EC2 instance in a VPC with an associated Elastic IP is stopped and started?Choose 2 correct Answers.
 
-A.The ENI (Elastic Network Interface) is detatched
+A. The ENI (Elastic Network Interface) is detatched
 B. The Elastic IP will be dissociated from the instance
 C. The underlying host for the instance can be changed
 D. All data on instance-store devices will be lost
 
+CD
 
 225. You are planning on creating an EC2 instance that will create S3 objects and modify CloudWatch alarms. What is the best way to deploy this instance?
 
@@ -2331,11 +2357,7 @@ B. Assign an S3 policy and a CloudWatch policy to a single IAM user. Have the in
 C. Assign an S3 policy to one IAM user and a CloudWatch policy to another IAM user. Have the instance execute tasks as the appropriate IAM user for the given task
 D. Assign an S3 policy to one IAM role and a CloudWatch policy to another IAM role. Assign both IAM roles to the EC2 instance at deployment time
 
-
-A. 2TiB
-B. 16TiB
-C. 16TB
-D. 4Gib
+D
 
 226. You and a colleague create an SQS queue and create several messages in it. You both test your ability to manually poll the queue by using the command-line API calls. After testing, you find that your colleague’s polling attempt retrieved messages 1, 3, and 5. Your polling attempt retrieved messages 4, 6, and 8. Nether of your attempts retrieved messages 2 or 7. What is a possible cause for this behavior?  Choose the 2 correct answers:
 
@@ -2344,15 +2366,7 @@ B. You and your colleague used short polling
 C. SQS security group rules are prohibiting you and your colleague from retrieving messages from SQS servers in different subnets from your client computers
 D. You and your colleague did not see the same messages because of the visibility timeout
 
-
-226. You are consulting for a company with a limited budget for on-premise hardware. However, they need to store large amounts of data that is easily accessible through a network share with on-premise employees. Which AWS solution would you implement for this company?
-
-A. Configure S3 as a file system on a local on-premise server
-B. Configure storage gateway with Gateway-Stored volumes
-C. EC2 instances with large EBS volumes and a VPN from VPC to the on-premise network
-D. Configure storage gateway with Gateway-Cached Volumes
-
-D
+BD
 
 227. Amazon SQS (Simple Queue Service) guarantees delivery of AT LEAST 1 message but cannot guarantee it will not create duplicates.
 
@@ -2361,11 +2375,21 @@ B. False
 
 A
 
+228. You are consulting for a company with a limited budget for on-premise hardware. However, they need to store large amounts of data that is easily accessible through a network share with on-premise employees. Which AWS solution would you implement for this company?
+
+A. Configure S3 as a file system on a local on-premise server
+B. Configure storage gateway with Gateway-Stored volumes
+C. EC2 instances with large EBS volumes and a VPN from VPC to the on-premise network
+D. Configure storage gateway with Gateway-Cached Volumes
+
+D
+
 229. You can deny the AWS root account to EC2 instances via IAM policy.
 
 A. True
 B. False
 
+B
 
 230. Which is an operational process performed by AWS for data security?
 
@@ -2374,6 +2398,7 @@ B. AES-256 encryption of data stored on any shared storage device
 C. Decommissioning of storage devices using industry-standard practices
 D. Secure wiping of EBS data when an EBS volume is unmounted
 
+C
 
 231. You manage a web application on EC2 instances. Your website occasionally experiences brief but large spikes in traffic that cause your EC2 instances’ resources to become overwhelmed and the application to freeze up and lose recently-submitted requests from end users. You use Auto Scaling to deploy additional resources to handle the load during spikes, but the new instances do not deploy fast enough to prevent the existing application servers from freezing. Assuming you cannot find a pattern to when these spikes occur, which of the following is likely to provide the most cost-effective solution to avoid losing recently submitted requests?
 
@@ -2391,6 +2416,7 @@ B. operating system visible metrics such as memory utilization
 C. database memory usage
 D. web service visible metrics such as number failed transaction requests
 
+A
 
 233. The AMI ID used in an Auto Scaling policy is configured in the _______.
 
@@ -2399,6 +2425,7 @@ B. Group policy
 C. Auto Scaling group
 D. None of the above
 
+A
 
 234. Which of the following is not a benefit of a decoupled architecture using EC2, Auto Scaling, and SQS?
 
@@ -2407,6 +2434,7 @@ B. An application does not become unavailable due to the failure of a single EC2
 C. An application does not become unavailable due to the deletion of a single SQS queue
 D. Auto Scaling can spin up new EC2 instances to handle an increased number of items in an SQS queue
 
+C
 
 235. Auto Scaling is a tool used for creating elastic and self-healing applications.
 
@@ -2422,6 +2450,7 @@ B. Amazon Glacier, to keep costs low for storage and scale infinitely
 C. Amazon Import/Export, because Amazon assists in migrating large amounts of data to Amazon S3
 D. Amazon EC2, because EBS volumes can scale to hold any amount of data and, when used with Auto Scaling, can be designed for fault tolerance and high availability
 
+A
 
 237. You are asked to perform a security audit on a company’s AWS environment. You log in to their AWS account with the root user credentials and discover that they are using a VPN to connect to and manage their private EC2 instances. Upon further inspection, you find that they are not regularly patching their RDS instances. Finally, you notice that they are using IAM policies rather than bucket policies to manage access to their S3 buckets. What do you cite as the most critical security risk in your report?
 
@@ -2430,6 +2459,7 @@ B. The company is not using bucket policies to manage S3 bucket access
 C. The company’s employees are not using a bastion host to connect to their private EC2 instances
 D. The company allows people to log in with their AWS account’s root user
 
+D
 
 238. If your organization is concerned about storing sensitive data in the cloud, you should _______.  Choose 3 correct Answers:
 
@@ -2437,6 +2467,8 @@ A. Enable EBS Encyption
 B. Enable S3 Encryption
 C. With AWS you do not need to worry about encryption
 D. Encrypt the file system on an EBS volume using Linux tools
+
+ABD
 
 239. Elasticity is a fundamental property of the cloud. What best describes elasticity?
 
@@ -2453,6 +2485,8 @@ A. Amazon SQS (Simple Queue Service) guarantees delivery of AT LEAST 1 message b
 B. Amazon SQS guarantees delivery of AT LEAST 1 message and the message order which it is sent/received
 C. Amazon SQS guarantees delivery of AT LEAST 1 message but cannot guarantee message order, although does attempt to
 D. Amazon SQS (Simple Queue Service) guarantees delivery of AT LEAST 1 message and guarantees it will not create duplicates
+
+AC
 
 241. When designing an application architecture utilizing EC2 instances and the ELB, to determine the instance size required for your application what questions might be important?  Choose 2 correct answers:
 
@@ -2472,7 +2506,7 @@ D. Free memory
 
 AD
 
-243.  What is the difference between an availability zone and an edge location?  Choose the correct answer:
+243. What is the difference between an availability zone and an edge location?  Choose the correct answer:
 
 A. An availability zone is an Amazon resource within an AWS region; an edge location will deliver cached content to the closest location to reduce latency
 B. Edge locations are used as control stations for AWS resources
@@ -2481,7 +2515,7 @@ D. An availability zone is a grouping of AWS resources in a specific region; an 
 
 A
 
-244.  You recently purchased hardware to run a decoupled application in your on-premises datacenter. The application is working great, but has seen an increased workload in recent weeks that makes you concerned that your hardware cannot handle the load. Your supervisor asks you to analyze the possibility of expanding the application using cloud resources. You cannot completely migrate the application to AWS because of the investment you have already made in on-premises hardware. What items will most likely be included in your analysis?  Choose the 2 correct answers:
+244. You recently purchased hardware to run a decoupled application in your on-premises datacenter. The application is working great, but has seen an increased workload in recent weeks that makes you concerned that your hardware cannot handle the load. Your supervisor asks you to analyze the possibility of expanding the application using cloud resources. You cannot completely migrate the application to AWS because of the investment you have already made in on-premises hardware. What items will most likely be included in your analysis?  Choose the 2 correct answers:
 
 A. You can leverage SWF to utilize both on-premises servers and EC2 instances for your decoupled application
 B. SQS is not a valid option to help you use on-premises servers and EC2 instances in the same application, as it cannot be polled by on-premises servers
@@ -2499,13 +2533,13 @@ D. 1 Byte
 
 B
 
-246.  Data stored on EBS volumes are automatically and redundantly stored in multiple physical volumes in the same availability zone as part of the normal operations of the EBS service at no additional charge.
+246. Data stored on EBS volumes are automatically and redundantly stored in multiple physical volumes in the same availability zone as part of the normal operations of the EBS service at no additional charge.
 Choose the correct answer:
 
 A. True
 B. False
 
-247.  Your web application front end consists of multiple EC2 instances behind an Elastic Load Balancer. You configured the ELB to perform health checks on these EC2 instances. If an instance fails to pass health checks, which statement is true?
+247. Your web application front end consists of multiple EC2 instances behind an Elastic Load Balancer. You configured the ELB to perform health checks on these EC2 instances. If an instance fails to pass health checks, which statement is true?
 
 A. The ELB stops sending traffic to the instance that failed its health check.
 B. The instance gets terminated automatically by the ELB
@@ -2514,27 +2548,33 @@ D. The instance gets quarantined by the ELB for root cause analysis
 
 A
 
-248.  You manage an application that uses EC2 instances and SQS to process requests from end users. Your application is working great, but your supervisor is concerned about the cost of the AWS resources it uses. Which of the following would not help address that concern?
+248. You manage an application that uses EC2 instances and SQS to process requests from end users. Your application is working great, but your supervisor is concerned about the cost of the AWS resources it uses. Which of the following would not help address that concern?
 
 A. Use Auto Scaling to grow and shrink the number of EC2 instances based on the number of messages in the SQS queue
 B. Switch from short polling to long polling
 C. Decrease the size of the SQS messages from 70 KB to 60 KB
 D. Increase the visibility timeout for messages in the SQS queue
 
-249.  You've been tasked with building out a duplicate environment in another region for disaster recovery purposes. Part of your environment relies on EC2 instances with preconfigured software. What steps would you take to configure the instances in another region?
+A
+
+249. You've been tasked with building out a duplicate environment in another region for disaster recovery purposes. Part of your environment relies on EC2 instances with preconfigured software. What steps would you take to configure the instances in another region?
 
 A. Create an AMI of the EC2 instance
 B. Create an AMI of the EC2 instance and copy the AMI to the desired region
 C. Make the EC2 instance shareable among other regions through IAM permissions
 D. None of the above
 
-250.  You have 8 instances running on your VPC and all 10 of your users (5 production and 5 development) currently have access to all the instances. However, you have been told that because 4 of the instances are used for production and 4 are used for development you will need to set up access so that the 5 production people can only access the production server and the 5 development people can only access the development server. Using policies, which of the following would be the best way to accomplish this?
+B
+
+250. You have 8 instances running on your VPC and all 10 of your users (5 production and 5 development) currently have access to all the instances. However, you have been told that because 4 of the instances are used for production and 4 are used for development you will need to set up access so that the 5 production people can only access the production server and the 5 development people can only access the development server. Using policies, which of the following would be the best way to accomplish this?
 
 A. Launch the test and production instances in different Availability Zones and use Multi Factor Authentication
 B. Launch the test and production instances in separate VPC's and use VPC peering
 C. Define the tags on the test and production servers and add a condition to the IAM policy which allows access to specific tags
 D. Create an IAM policy with a condition which allows access to only instances that are used for production or development
 C
+
+D
 
 251.  You are asked to evaluate a company’s AWS environment to find ways to reduce cost. You discover they are running three production web server reserved EC2 instances with EBS-backed root volumes. These instances have a consistent CPU load of 80%. Traffic is being distributed to these instances by an Elastic Load Balancer. They also have production and development Multi-AZ RDS MySQL databases. What recommendation would you make to reduce cost in this environment without affecting availability of mission-critical systems?
 
@@ -2545,7 +2585,7 @@ D. Consider using spot instances instead of reserved EC2 instances
 
 C
 
-252.  You own an image manipulation application. Your users take a picture, upload it to your app, and request filters to be added to the image. You need to decouple the application so your users are not waiting for the image processing to take place. How would you go about doing this?
+252. You own an image manipulation application. Your users take a picture, upload it to your app, and request filters to be added to the image. You need to decouple the application so your users are not waiting for the image processing to take place. How would you go about doing this?
 
 A. Use Amazon S3 to store the images and Amazon EC2 to process the request
 B. Use Amazon SNS to process image requests
@@ -2554,7 +2594,7 @@ D. Integrate with DynamoDB to allow messages to be sent back and forth between o
 
 C
 
-253.  You have 5 CloudFormation templates. Each template is for a different application architecture. These architectures vary between your blog apps and your gaming apps. What determines the cost of using the CloudFormation templates?
+253. You have 5 CloudFormation templates. Each template is for a different application architecture. These architectures vary between your blog apps and your gaming apps. What determines the cost of using the CloudFormation templates?
 
 A. CloudFormation does not have a cost but you are charged for the underlying resources it builds
 B. The length of time it takes to build the architecture with CloudFormation
@@ -2563,7 +2603,7 @@ D. Only for cloud formation templates that go over the allowed limit
 
 A
 
-254.  Ten students have just been employed by your company for one week and it is your task to provide them with access to AWS, through IAM. Your supervisor has come to you and said that he wants to be able to track these students as a group, rather than individually. Because of this, he has requested for them to all have the same login ID but completely different passwords. Which of the following is the best way to achieve this?
+254. Ten students have just been employed by your company for one week and it is your task to provide them with access to AWS, through IAM. Your supervisor has come to you and said that he wants to be able to track these students as a group, rather than individually. Because of this, he has requested for them to all have the same login ID but completely different passwords. Which of the following is the best way to achieve this?
 
 A. It isn't possible to have the same login ID for multiple IAM users of the same account
 B. Create a separate login ID, but give each IAM user the same alias so that each one can login with their alias
@@ -2581,7 +2621,7 @@ D. None of the above
 
 B
 
-256.  Your application's usage peaks at 90% during the hours of 9 AM and 10 AM everyday. All other hours require only 10% of the peak resources. What is the best way to scale your application so you're only paying for max resources during peak hours?
+256. Your application's usage peaks at 90% during the hours of 9 AM and 10 AM everyday. All other hours require only 10% of the peak resources. What is the best way to scale your application so you're only paying for max resources during peak hours?
 
 A. Proactive event-based scaling
 B. Proactive Cycle Scaling
@@ -2590,7 +2630,7 @@ D. Auto Scaling by demand
 
 B
 
-257.  Which of the following is an invalid VPC peering configuration?
+257. Which of the following is an invalid VPC peering configuration?
 
 A. You have a VPC peering connection between VPC A and VPC B, which are in the same AWS account, and do not have overlapping CIDR blocks
 B. You have peered three VPCs together in a full mesh configuration. The VPCs are in the same AWS account and do not have overlapping CIDR blocks
@@ -2599,7 +2639,7 @@ D. You have a VPC peering connection between VPC A and VPC B. VPC A also has a V
 
 D
 
-258.  Your organization has been using a HSM (Hardware Security Module) for secure key storage. It is only used for generating keys for your EC2 instances. Unfortunately, the HSM has been zeroized after someone attempted to log in as the administrator three times using an invalid password. This means that the encryption keys on it have been wiped. You did not have a copy of the keys stored anywhere else. How can you obtain a new copy of the keys that you had stored on HSM?
+258. Your organization has been using a HSM (Hardware Security Module) for secure key storage. It is only used for generating keys for your EC2 instances. Unfortunately, the HSM has been zeroized after someone attempted to log in as the administrator three times using an invalid password. This means that the encryption keys on it have been wiped. You did not have a copy of the keys stored anywhere else. How can you obtain a new copy of the keys that you had stored on HSM?
 
 A. Restore a snapshot of the HSM
 B. You can still connect via CLI; use the command 'get-client-configuration' and you can get a copy of the keys
@@ -2617,7 +2657,7 @@ D. DynamoDB
 
 D
 
-260.  After migrating an application architecture from on-premise to AWS you will not be responsible for the ongoing maintenance of packages for the following AWS services that your application uses:
+260. After migrating an application architecture from on-premise to AWS you will not be responsible for the ongoing maintenance of packages for the following AWS services that your application uses:
 
 A. RDS
 B. DynamoDB
@@ -2679,7 +2719,7 @@ D. This is expected behavior when using short polling because SQS does not guara
 
 C
 
-267.  To prevent in-flight tampering, all requests sent with API keys over REST or Query API should be sent over HTTPS connection.
+267. To prevent in-flight tampering, all requests sent with API keys over REST or Query API should be sent over HTTPS connection.
 
 A. True
 B. False
@@ -2696,7 +2736,6 @@ D. Data archives
 AD
 
 269. Your AWS environment contains several reserved EC2 instances dedicated to a project that has just been cancelled. Your supervisor would like to recuperate cost for these reserved instances, but also does not want to lose the data just yet in case the project is revived next fiscal year. What can you do to minimize charges for these instances?  Choose the 2 correct answers:
-
 
 A. Sell the instances on the AWS Reserved Instance Marketplace
 B. Take snapshots of the EBS volumes and terminate the instances
@@ -2741,7 +2780,7 @@ D. Encrypted data storage
 
 A
 
-274.  A user needs access to Elastic Load Balancing. This is the first and possibly only time that they will require this access. Which of the following choices would be the best way to allow this access?
+274. A user needs access to Elastic Load Balancing. This is the first and possibly only time that they will require this access. Which of the following choices would be the best way to allow this access?
 
 A. Give them temporary access to your account for 24 hours only and change the password the next day
 B. Open up whichever port ELB uses in a security group and give the user access to that security group in a policy
@@ -2759,7 +2798,7 @@ D. By default, a request is allowed, but this can be overridden by a deny. In co
 
 B
 
-276.  By default is data in S3 encrypted?
+276. By default is data in S3 encrypted?
 
 A. Yes, but only in government cloud data centers
 B. Yes, S3 always encrypts data for security
@@ -2801,6 +2840,7 @@ B. SQS polling from an EC2 instance deployed with an IAM role
 C. SQS polling from an on-premises server using IAM user credentials
 D. An SWF workflow
 
+C
 
 281. Your supervisor asks you to create a decoupled application using EC2 instances polling an SQS queue. Which of the following is not necessary to accomplish this goal?
 
@@ -3179,4 +3219,13 @@ C. It is a blob of data that has particular meaning to the user. Examples includ
 D. It refers to the storage of multiple records in a stream's record and allows customers to increase the number of records sent per API call, which effectively increases producer throughput
 
 D
+
+322. You and a colleague create an SQS queue and create several messages in it. You both test your ability to manually poll the queue by using the command-line API calls. After testing, you find that your colleague’s polling attempt retrieved messages 1, 3, and 5. Your polling attempt retrieved messages 4, 6, and 8. Nether of your attempts retrieved messages 2 or 7. What is a possible cause for this behavior?  Choose the 2 correct answers:
+
+A. When manually polling the queue, you can only retrieve messages that you created
+B. You and your colleague used short polling
+C. SQS security group rules are prohibiting you and your colleague from retrieving messages from SQS servers in different subnets from your client computers
+D. You and your colleague did not see the same messages because of the visibility timeout
+
+BD
 
