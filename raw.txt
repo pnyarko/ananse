@@ -2312,7 +2312,7 @@ B. No, you need to sell two of the current Availability Zone 1 reserved instance
 C. Yes, you can change the destination Availability Zone for the reserved instances by contacting AWS
 D. Yes, you can deploy two EC2 instances in Availability Zone 2 and they will be automatically billed as reserved instances since both Availability Zones are in the same region
 
-D
+A
 
 221. Your EC2 instances are configured to run behind an Amazon VPC. You have assigned two web serves instances to an Elastic Load Balancer. However, the instances and the ELB are not reachable via URL to the elastic load balancer serving the web app data from the EC2 instances. How might you resolve the issue so that your instances are serving the web app data to the public Internet?
 
@@ -2495,7 +2495,7 @@ B. Determine the required I/O operations
 C. Determining the peek expected usage for a clients application
 D. Determining where the client intends to serve most of the traffic
 
-A
+AB
 
 242. For basic monitoring on AWS, which metrics are not included as part of the basic monitoring package?  Choose the 2 correct answers:
 
@@ -3076,7 +3076,7 @@ B. Ensure that the instance it's using has an elastic IP address assigned to it
 C. Create an AMI of the instance and launch it using Auto Scaling which will deploy the instance again if it becomes unhealthy
 D. Write a custom script that pings the health of the instance, and, if the instance stops responding, switches the elastic IP address to a standby instance
 
-D
+BD
 
 306. Which of the following is not expected behavior from SQS and may indicate a problem with your application?
 
@@ -3229,3 +3229,21 @@ D. You and your colleague did not see the same messages because of the visibilit
 
 BD
 
+323. How can software determine the public and private IP addresses of the Amazon Elastic Cloud Compute instance that it is running on?
+
+A. Use an ipconfig or ifconfig command
+B. Query the local instance metadata.
+C. Query the local instance userdata.
+D. Query the appropriate Amazon CloudWatch metric.
+
+B
+
+324. What combination of the following options will protect Amazon Simple Service(S3) objects from both accidental overwriting?
+
+A. Enable S3 versioning on the bucket.
+B. Access S3 data using only signed URLs.
+C. Disable S3 delete using IAM bucket policy.
+D. Enable S3 Reduced Redundancy Storage.
+E. Enable multi-factor(MFA) protected access.
+
+A
