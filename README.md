@@ -1,4 +1,6 @@
-Assumptions
+#University of Leodis Solution Document
+
+##Assumptions
 1. The user running the playbook has the correct sudo rights.
 2. The user on the server has generated public/private key and has added the public key to authorized_keys file using ssh-copy-id on the target servers in the inventory list.
 
